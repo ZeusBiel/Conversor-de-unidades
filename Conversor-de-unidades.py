@@ -22,5 +22,4 @@ def converter_unidade(valor, unidade_origem, unidade_destino):
         print("Unidades de medida não suportadas.")
         return None
     return resultado
-    print(resultado)
 
