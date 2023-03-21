@@ -18,6 +18,15 @@ def converter_unidade(valor, unidade_origem, unidade_destino):
     elif unidade_origem == 'ft' and unidade_destino == 'm':
         resultado = valor / 3.28084
         print(f"{resultado} m")
+    elif unidade_origem == 'km' and unidade_destino == 'm':
+        resultado = valor * 1000
+        print(f"{resultado} m")
+    elif unidade_origem == 'm' and unidade_destino == 'cm':
+        resultado = valor * 100
+        print(f"{resultado} cm")
+    elif unidade_origem == 'm' and unidade_destino == 'km':
+        resultado = valor / 1000
+        print(f"{resultado} km")
     else:
         print("Unidades de medida não suportadas.")
         return None
