@@ -1,18 +1,18 @@
-valor = float(input("Insira o valor: "))
+valor = float(input("Insira o valor: ")) #Variaveis usadas
 calc = 0
 calc2 = 0
 final = 0
 destinoM = "Undefined"
 origem = "Undefined"
 
-unidades_validas = ["km", "hm", "dan", "m", "dm", "cm", "mm"]
+unidades_validas = ["km", "hm", "dan", "m", "dm", "cm", "mm"] #Enquanto não for atribuido uma medida valida = loop
 origem = input("Insira a origem: ")
 while origem not in unidades_validas:
     print("Unidade de media não suportada. ")
     origem = input("Insira novamente a origem: ")
 
 
-def origemM(destin, cal):
+def origemM(destin, cal): #Atribui os valores para o calculo final
  if   origem == "km":
         destin = input("Selecione a unidade de destino: hm, dan, m, dm, cm, mm: ")
         cal = 3
@@ -35,7 +35,7 @@ def origemM(destin, cal):
         destin = input("Selecione a unidade de destino: km, hm, dan, m, dm, cm: ")
         cal = -3
 
-def convertM(destin, cal):
+def convertM(destin, cal): #Atribui a segunda parte do calculo final
  if destin == "km":
     cal = 3
  elif destin == "hm":
@@ -53,11 +53,13 @@ def convertM(destin, cal):
  else: print("Unidade de medida não suportada, insira novamente: ")
  return convertM
 
+#linha de raciocinio
 
 origemM(destinoM, calc)
 
 convertM (destinoM, calc2)
 
+#calculo final
 
 if calc > calc2:
     final = valor * (10**(calc - calc2))
