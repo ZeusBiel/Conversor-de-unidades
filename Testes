@@ -1,48 +1,62 @@
 valor = float(input("Insira o valor: "))
+calc = 0
+calc2 = 0
+final = 0
+destinoM = "Undefined"
+origem = "Undefined"
+
+unidades_validas = ["km", "hm", "dan", "m", "dm", "cm", "mm"]
 origem = input("Insira a origem: ")
+while origem not in unidades_validas:
+    print("Unidade de media não suportada. ")
+    origem = input("Insira novamente a origem: ")
 
-if   origem == "km":
-        destinoM = input("Selecione a unidade de destino: hm, dan, m, dm, cm, mm: ")
-        calc = 3
-elif origem == "hm":
-        destinoM = input("Selecione a unidade de destino: km, dan, m, dm, cm, mm: ")
-        calc = 2
-elif origem == "dan":
-        destinoM = input("Selecione a unidade de destino: km, hm, m, dm, cm, mm: ")
-        calc = 1
-elif origem == "m":
-        destinoM = input("Selecione a unidade de destino: km, hm, dan, dm, cm, mm: ")
-        calc = 0
-elif origem == "dm":
-        destinoM = input("Selecione a unidade de destino: km, hm, dan, m, cm, mm: ")
-        calc = -1
-elif origem == "cm":
-        destinoM = input("Selecione a unidade de destino: km, hm, dan, m, dm, mm: ")
-        calc = -2
-elif origem == "mm":
-        destinoM = input("Selecione a unidade de destino: km, hm, dan, m, dm, cm: ")
-        calc = -3
-else: print("Unidade de media não suportada: ")
 
-def convertM(destinoM, calc2):
- if destinoM == "km":
-    calc2 = 3
- elif destinoM == "hm":
-    calc2 = 2
- elif destinoM == "dan":
-    calc2 = 1
- elif destinoM == "m":
-    calc2 = 0
- elif destinoM == "dm":
-    calc2 = -1
- elif destinoM == "cm":
-    calc2 = -2
- elif destinoM == "mm":
-    calc2 = -3
+def origemM(destin, cal):
+ if   origem == "km":
+        destin = input("Selecione a unidade de destino: hm, dan, m, dm, cm, mm: ")
+        cal = 3
+ elif origem == "hm":
+        destin = input("Selecione a unidade de destino: km, dan, m, dm, cm, mm: ")
+        cal = 2
+ elif origem == "dan":
+        destin = input("Selecione a unidade de destino: km, hm, m, dm, cm, mm: ")
+        cal = 1
+ elif origem == "m":
+        destin = input("Selecione a unidade de destino: km, hm, dan, dm, cm, mm: ")
+        cal = 0
+ elif origem == "dm":
+        destin = input("Selecione a unidade de destino: km, hm, dan, m, cm, mm: ")
+        cal = -1
+ elif origem == "cm":
+        destin = input("Selecione a unidade de destino: km, hm, dan, m, dm, mm: ")
+        cal = -2
+ elif origem == "mm":
+        destin = input("Selecione a unidade de destino: km, hm, dan, m, dm, cm: ")
+        cal = -3
+
+def convertM(destin, cal):
+ if destin == "km":
+    cal = 3
+ elif destin == "hm":
+    cal = 2
+ elif destin == "dan":
+    cal = 1
+ elif destin == "m":
+    cal = 0
+ elif destin == "dm":
+    cal = -1
+ elif destin == "cm":
+    cal = -2
+ elif destin == "mm":
+    cal = -3
  else: print("Unidade de medida não suportada, insira novamente: ")
  return convertM
 
-convertM
+
+origemM(destinoM, calc)
+
+convertM (destinoM, calc2)
 
 
 if calc > calc2:
