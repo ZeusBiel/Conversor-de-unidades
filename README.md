@@ -1,3 +1,3 @@
-Pasta script é para os novos códigos funcinando
+Pasta script é para os novos códigos funcionando
 
-Teste é para novos códigos com erro ou faltando algo
+Testes é para novos códigos com erro ou faltando algo
